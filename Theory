@@ -1,0 +1,46 @@
+When and Why do we do Lazy?
+If we have huge application with lots of components that time we use Lazy
+Clicking on any component only that page needs to load instead of whole data we go for Lazy
+
+What is Suspense
+<Suspense fallback={<Loading />}>
+  <SomeComponent />
+</Suspense>
+Suspense: lets you display a fallback until its children have finished loading.
+fallback: An alternate UI to render in place of the actual UI if it has not finished loading.
+
+
+When do we and why do we need suspense ?
+React.Suspense lets you specify the loading indicator in case
+some components in the tree below it are not yet ready to render. In the future we plan to let Suspense handle more scenarios such as data fetching.
+
+Advantages and disadvantages to use code splitting pattern?
+ Advantages of using code splitting include:
+     1) Improved load times: By only loading the code that is needed for a specific page or feature,
+        code splitting can greatly reduce the initial load time of the application. This can be especially beneficial
+        for users on slow internet connections or for applications with large code bases.
+
+     2) Reduced bundle size: By splitting code into smaller chunks, the overall size of the JavaScript bundle is reduced,
+        which can improve the load time and performance of the application.
+
+     3) Increased caching efficiency: By splitting code into smaller chunks, the browser is able to cache more
+        of the application's code, which can reduce the amount of data that needs to be downloaded on subsequent
+        visits to the application.
+
+     4) Reusability: Code splitting allows for individual chunks of code to be reused across different parts of the application,
+        which can improve code maintainability and reduce duplication.
+
+     
+     Disadvantages of using code splitting include:
+
+     1) Increased complexity: Code splitting requires more upfront planning and can add complexity to the build process
+        and application structure.
+
+     2) Increased development time: Code splitting requires developers to manually split the code into smaller chunks
+        and can add additional development time.
+
+     3) Increased bundle size for larger applications: If the application has many pages or features, the total size of the
+      JavaScript bundle may still be large, even if it is split into smaller chunks.
+
+     4) Increased maintenance: With code splitting, it is necessary to ensure that all the chunks are loaded and executed
+        in the right order, which can add complexity to the application and make it more difficult to maintain.
